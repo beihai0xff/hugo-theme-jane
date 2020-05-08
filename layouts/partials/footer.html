@@ -7,11 +7,7 @@
     Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
-  <span class="theme-info">
-    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
-  </span>
-
-  <span class="copyright-year">
+  <span class="division">
     {{- $current := now.Format "2006" }}
     &copy;
     {{ if ne .Site.Params.since $current }}
@@ -24,11 +20,14 @@
         {{ partial "svg/heart.svg" }}
       </i>
     </span>
-    {{- if or .Site.Copyright .Site.Author.name -}}
+    {{- if .Site.Author.name -}}
+    <span class="author">{{ .Site.Author.name | safeHTML }}</span>
+  {{- end -}}
+  </span>
+  <span class="copyright-year">
+    {{- if or .Site.Copyright }}
       <span class="author">
-        {{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}
-        {{ else }}{{ .Site.Author.name | safeHTML }}
-        {{ end }}
+        {{ .Site.Copyright | safeHTML }}
       </span>
     {{- end -}}
   </span>
