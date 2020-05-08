@@ -14,22 +14,6 @@
       {{- end -}}
       </span>
   </p>
-  <p class="copyright-item">
-    <span class="item-title">{{ i18n "lastMod" }}</span>
-    <span class="item-content">
-      {{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
-      {{ with .GitInfo }}
-        {{ if $.Site.Params.gitInfo.gitRepo -}}
-        <a href="{{ $.Site.Params.gitInfo.gitRepo }}/commit/{{ .Hash }}" title="{{ .Subject }}">
-          ({{ .AbbreviatedHash }})
-        </a>
-        {{- end }}
-        {{ if $.Site.Params.gitInfo.showCommitMessage }}
-          <br>{{ .Subject }}
-        {{ end }}
-      {{ end }}
-    </span>
-  </p>
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
     <p class="copyright-item">
@@ -48,5 +32,11 @@
     {{- end -}}
     </span>
   </p>
+  <center>
+    <p class="copyright-item">
+      <span class="item-title">=== 点击访问本站<a href="/404.html"> 公益 404 页面 </a>帮助失踪儿童回家 ===</span>
+    </p>
+</center>
 </div>
+
 {{- end }}
