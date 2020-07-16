@@ -54,11 +54,14 @@ $global-container-padding: 0 20px !default;
 // Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px.
 $global-lineheight: 1.8 !default;
 
+// Serif font family of the site.
+$global-serif-font-family:  serif !default;
+
 // Font family of the site.
-$global-font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK", "system-ui" !default;
+$global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, 'Microsoft YaHei', "Noto Sans CJK", sans-serif, "system-ui" !default;
 
 // Serif font family of the site.
-$global-serif-font-family: "Microsoft YaHei", PMingLiu, STSong, SimSun, "WenQuanYi Bitmap Song", "Noto Serif CJK","system-ui", serif !default;
+$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, "Noto Serif CJK", serif, 'system-ui',!default;
 
 // Background color of the site.
 $global-background: $white !default;
